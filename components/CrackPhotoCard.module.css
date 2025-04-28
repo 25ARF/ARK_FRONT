@@ -1,0 +1,290 @@
+/* CrackPhotoCard.module.css 또는 유사 파일 (100% 배율 조정됨) */
+
+.wrapper {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.card {
+  width: 37.78rem; /* 50.375 * 0.75 */
+  height: 19.78rem; /* 26.375 * 0.75 */
+  /* width: 100%; */
+  /* height: 100%; */
+  border-radius: 0.94rem; /* 1.25 * 0.75 */
+  background: #fff;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25); /* 4px * 0.75 = 3px */
+  padding: 15px; /* 20px * 0.75 */
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 0.75rem; /* 1rem * 0.75 */
+  font-weight: 600;
+  position: relative;
+  z-index: 10; /* 카드가 앞 */
+}
+
+.dateHeader {
+  position: absolute;
+  top: -30px; /* -40px * 0.75 */
+  left: -9px; /* -12px * 0.75 */
+  display: flex;
+  align-items: center;
+  gap: 6px; /* 8px * 0.75 */
+  z-index: 1; /* 카드보다 뒤 */
+}
+
+.selectedDateText {
+  margin-bottom: 0.94rem; /* 1.25rem * 0.75 */
+  margin-left: 0.75rem; /* 1rem * 0.75 */
+  position: absolute;
+  padding: 3px 6px; /* 4px * 0.75 = 3px, 8px * 0.75 = 6px */
+  border-radius: 3px; /* 4px * 0.75 */
+}
+
+.dateHeader p {
+  color: #fafafb;
+  font-family: Pretendard;
+  font-size: 0.66rem; /* 0.875rem * 0.75 */
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.94rem; /* 1.25rem * 0.75 */
+}
+
+.imageDisplay {
+  padding: 15px; /* 20px * 0.75 */
+  text-align: center;
+  border-radius: 3px; /* 4px * 0.75 */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder {
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+}
+
+.loading,
+.error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.13rem; /* 1.5rem * 0.75 */
+  color: #999;
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-7px); /* -10px * 0.75 -> -7.5px */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.imageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.13rem; /* 1.5rem * 0.75 */
+}
+
+.imageHeader h3 {
+  margin: 0;
+  font-size: 0.94rem; /* 1.25rem * 0.75 */
+  color: #333;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.imageContainer:hover img {
+  transform: scale(1.02);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.imageContainer:hover .imageOverlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.fullscreenIcon {
+  color: white;
+  font-size: 1.5rem; /* 2rem * 0.75 */
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.imageContainer:hover .fullscreenIcon {
+  opacity: 1;
+}
+
+/* .imageInfo의 정의가 두 개인데, 사용 맥락에 따라 구분 필요. 첫 번째 정의 기준 */
+.imageInfo.someContext {
+  /* 클래스 이름에 맥락 추가 필요 예: .imageInfoFlex */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* 1rem * 0.75 */
+  padding: 0.75rem; /* 1rem * 0.75 */
+  background: #f8f9fa;
+  border-radius: 0.56rem; /* 0.75rem * 0.75 */
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.19rem; /* 0.25rem * 0.75 */
+}
+
+.label {
+  font-size: 0.68rem; /* 0.9rem * 0.75 */
+  color: #666;
+}
+
+.value {
+  font-size: 0.75rem; /* 1rem * 0.75 */
+  color: #333;
+}
+
+.높음,
+.중간,
+.낮음 {
+  font-weight: 600;
+}
+.높음 {
+  color: #dc3545;
+}
+.중간 {
+  color: #ffc107;
+}
+.낮음 {
+  color: #28a745;
+}
+
+.imageGrid {
+  display: flex;
+  gap: 12px; /* 16px * 0.75 */
+  padding: 12px; /* 16px * 0.75 */
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #666 #292e57;
+}
+
+.imageGrid::-webkit-scrollbar {
+  height: 6px; /* 8px * 0.75 */
+}
+
+.imageGrid::-webkit-scrollbar-track {
+  background: #292e57;
+  border-radius: 3px; /* 4px * 0.75 */
+}
+
+.imageGrid::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 3px; /* 4px * 0.75 */
+}
+
+.imageItem {
+  position: relative;
+  width: 135px; /* 180px * 0.75 */
+  height: 135px; /* 180px * 0.75 */
+  flex-shrink: 0;
+  border-radius: 6px; /* 8px * 0.75 */
+  overflow: hidden;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.imageItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .imageInfo의 두 번째 정의 기준 */
+.imageItem .imageInfo {
+  /* .imageItem 하위의 .imageInfo 로 명확화 */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 4px; /* 5px * 0.75 -> 3.75px */
+  color: white;
+}
+
+.timestamp {
+  font-size: 8px; /* 11px * 0.75 -> 8.25px */
+  white-space: normal;
+}
+
+.waypointTitle {
+  margin: 12px; /* 16px * 0.75 */
+  color: #fff;
+  font-size: 0.9em; /* 1.2em * 0.75 */
+  text-align: center;
+}
+
+.showMoreButton {
+  text-align: center;
+  margin-top: 12px; /* 16px * 0.75 */
+}
+
+.showMoreButton button {
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid #333; /* 1px 유지 */
+  padding: 6px 12px; /* 8px * 0.75 = 6px, 16px * 0.75 = 12px */
+  border-radius: 3px; /* 4px * 0.75 */
+  cursor: pointer;
+  font-size: 11px; /* 14px * 0.75 -> 10.5px */
+  transition: background-color 0.2s;
+}
+
+.showMoreButton button:hover {
+  background-color: #333;
+}
