@@ -26,27 +26,18 @@
   top: 0;
   left: 0;
   right: 0;
-  bottom: 60px; /* 헤더 높이만큼 하단 여백 추가 */
+  bottom: 60px;
   display: grid;
-  grid-template-rows: 52.9% 47.1%;
-  gap: 10px;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
   margin-right: 3.14rem;
   opacity: 0;
   transform: translateY(15px);
   animation: fadeInUp 0.5s ease forwards;
 }
 
-.row1 {
-  display: grid;
-  grid-template-columns: 25.8% 53.1% 21%;
-  gap: 10px;
-}
-
-.row2 {
-  display: grid;
-  grid-template-columns: 48% 24.8% 27.2%;
-  gap: 10px;
-}
+/* row1, row2는 더 이상 사용하지 않음 */
 
 .gridItem {
   background-color: #fff;
@@ -127,12 +118,6 @@
     position: relative;
     bottom: auto;
     padding-top: 10px;
-  }
-
-  .row1,
-  .row2 {
-    grid-template-columns: 1fr;
-    gap: 15px;
   }
 
   .gridItem {

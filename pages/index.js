@@ -9,7 +9,7 @@ import MapCard from "../components/MapCard";
 import BuildingCrackCountCard from "../components/BuildingCrackCountCard";
 import GraphCard from "../components/GraphCard";
 import RiskRankingCard from "../components/RiskRankingCard";
-import CrackStatsCard from "../components/CrackStatsCard";
+import CLusterCrack from "../components/CLusterCrack";
 
 /**
  * 대시보드 페이지 컴포넌트
@@ -69,27 +69,38 @@ export default function Dashboard() {
           <Header onToggleSidebar={toggleSidebar} isMobileView={isMobileView} />
           <main className={styles.main}>
             <div className={styles.dashboardGrid}>
-              <div className={styles.row1}>
-                <div className={styles.gridItem}>
-                  <BuildingListCard height="100%" />
-                </div>
-                <div className={styles.gridItem}>
-                  <MapCard />
-                </div>
-                <div className={styles.gridItem}>
-                  <BuildingCrackCountCard />
-                </div>
+              {/* 1행: 지도(좌), 설명(우) */}
+              <div
+                className={styles.gridItem}
+                style={{ gridColumn: "1 / 3", gridRow: "1" }}
+              >
+                <MapCard />
               </div>
-              <div className={styles.row2}>
-                <div className={styles.gridItem}>
-                  <GraphCard />
-                </div>
-                <div className={styles.gridItem}>
-                  <RiskRankingCard />
-                </div>
-                <div className={styles.gridItem}>
-                  <CrackStatsCard />
-                </div>
+              <div
+                className={styles.gridItem}
+                style={{ gridColumn: "3", gridRow: "1" }}
+              >
+                {/* 설명 카드 또는 원하는 컴포넌트 */}
+                지도에 표시할 아이콘 설명
+              </div>
+              {/* 2행: 그래프, 순위, 군집 */}
+              <div
+                className={styles.gridItem}
+                style={{ gridColumn: "1", gridRow: "2" }}
+              >
+                <GraphCard />
+              </div>
+              <div
+                className={styles.gridItem}
+                style={{ gridColumn: "2", gridRow: "2" }}
+              >
+                <RiskRankingCard />
+              </div>
+              <div
+                className={styles.gridItem}
+                style={{ gridColumn: "3", gridRow: "2" }}
+              >
+                <CLusterCrack />
               </div>
             </div>
             <div className={styles.disclaimerText}>
