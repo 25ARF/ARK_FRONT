@@ -1,0 +1,64 @@
+/* components/Header.module.css (100% 배율 조정됨) */
+.header {
+  /* 기존 스타일 유지 */
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* 추가: 요소들을 양쪽 끝으로 배치 */
+  height: 100%; /* 부모 높이 채우기 */
+  align-items: center; /* 추가: 세로 중앙 정렬 */
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerContainer {
+  height: 3.7rem; /* 4.9375rem * 0.75 */
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 0.94rem; /* 1.25rem * 0.75 */
+  background: transparent;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+/* 사이드바 토글 버튼 스타일 */
+.sidebarToggleButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 설정 버튼 스타일 */
+.settingsButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 모바일 화면 스타일 */
+@media (max-width: 768px) {
+  .headerContainer {
+    height: 3.2rem;
+  }
+
+  .headerText {
+    font-size: 1.1rem;
+    margin-top: 0;
+  }
+
+  .header {
+    padding: 0 0.5rem;
+  }
+}

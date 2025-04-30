@@ -1,0 +1,76 @@
+.card {
+  width: 19rem;
+  height: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cardHeader {
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+.cardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading,
+.noData {
+  color: #7f8c8d;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.crackList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.crackItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background-color: #f5f7f9;
+  border-radius: 6px;
+}
+
+.crackLabel {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.crackValue {
+  font-weight: 600;
+  color: #3498db;
+}
+
+.centerText {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #777777;
+  text-align: center;
+}

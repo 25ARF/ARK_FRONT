@@ -1,0 +1,569 @@
+{
+  "buildings": [
+    {
+      "id": "1",
+      "name": "다산정보관",
+      "location": {
+        "latitude": 36.145014,
+        "longitude": 128.393539
+      },
+      "measurements": [
+        {
+          "id": 1,
+          "label": "다산정보관 WP 1",
+          "location": {
+            "latitude": 36.145024,
+            "longitude": 128.393549,
+            "altitude": 110.5
+          },
+          "measurements": [
+            {
+              "date": "2024-03-01",
+              "width_mm": 0.5
+            },
+            {
+              "date": "2024-03-07",
+              "width_mm": 0.6
+            },
+            {
+              "date": "2024-03-15",
+              "width_mm": 0.8
+            },
+            {
+              "date": "2024-03-22",
+              "width_mm": 1
+            },
+            {
+              "date": "2024-03-29",
+              "width_mm": 1.2
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "label": "다산정보관 WP 2",
+          "location": {
+            "latitude": 36.145034,
+            "longitude": 128.393559,
+            "altitude": 110.8
+          },
+          "measurements": [
+            {
+              "date": "2024-03-01",
+              "width_mm": 0.3
+            },
+            {
+              "date": "2024-03-07",
+              "width_mm": 0.4
+            },
+            {
+              "date": "2024-03-15",
+              "width_mm": 0.5
+            },
+            {
+              "date": "2024-03-22",
+              "width_mm": 0.6
+            },
+            {
+              "date": "2024-03-29",
+              "width_mm": 0.7
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "label": "다산정보관 WP 3",
+          "location": {
+            "latitude": 36.145044,
+            "longitude": 128.393569,
+            "altitude": 111.2
+          },
+          "measurements": [
+            {
+              "date": "2024-03-01",
+              "width_mm": 0.7
+            },
+            {
+              "date": "2024-03-07",
+              "width_mm": 0.8
+            },
+            {
+              "date": "2024-03-15",
+              "width_mm": 1
+            },
+            {
+              "date": "2024-03-22",
+              "width_mm": 1.3
+            },
+            {
+              "date": "2024-03-29",
+              "width_mm": 1.5
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "label": "다산정보관 WP 4",
+          "location": {
+            "latitude": 36.145054,
+            "longitude": 128.393579,
+            "altitude": 111.5
+          },
+          "measurements": [
+            {
+              "date": "2024-03-01",
+              "width_mm": 0.4
+            },
+            {
+              "date": "2024-03-07",
+              "width_mm": 0.5
+            },
+            {
+              "date": "2024-03-15",
+              "width_mm": 0.7
+            },
+            {
+              "date": "2024-03-22",
+              "width_mm": 0.9
+            },
+            {
+              "date": "2024-03-29",
+              "width_mm": 1.1
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "label": "다산정보관 WP 5",
+          "location": {
+            "latitude": 36.145064,
+            "longitude": 128.393589,
+            "altitude": 111.8
+          },
+          "measurements": [
+            {
+              "date": "2024-03-01",
+              "width_mm": 0.6
+            },
+            {
+              "date": "2024-03-07",
+              "width_mm": 0.7
+            },
+            {
+              "date": "2024-03-15",
+              "width_mm": 0.9
+            },
+            {
+              "date": "2024-03-22",
+              "width_mm": 1.2
+            },
+            {
+              "date": "2024-03-29",
+              "width_mm": 1.4
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "label": "다산정보관 WP 6",
+          "location": {
+            "latitude": 36.145074,
+            "longitude": 128.393599,
+            "altitude": 112.1
+          },
+          "measurements": [
+            {
+              "date": "2024-03-01",
+              "width_mm": 0.3
+            },
+            {
+              "date": "2024-03-07",
+              "width_mm": 0.4
+            },
+            {
+              "date": "2024-03-15",
+              "width_mm": 0.6
+            },
+            {
+              "date": "2024-03-22",
+              "width_mm": 0.8
+            },
+            {
+              "date": "2024-03-29",
+              "width_mm": 1
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "label": "다산정보관 WP 7",
+          "location": {
+            "latitude": 36.145084,
+            "longitude": 128.393609,
+            "altitude": 112.4
+          },
+          "measurements": [
+            {
+              "date": "2024-03-01",
+              "width_mm": 0.5
+            },
+            {
+              "date": "2024-03-07",
+              "width_mm": 0.6
+            },
+            {
+              "date": "2024-03-15",
+              "width_mm": 0.8
+            },
+            {
+              "date": "2024-03-22",
+              "width_mm": 1
+            },
+            {
+              "date": "2024-03-29",
+              "width_mm": 1.2
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "label": "다산정보관 WP 8",
+          "location": {
+            "latitude": 36.145094,
+            "longitude": 128.393619,
+            "altitude": 112.7
+          },
+          "measurements": [
+            {
+              "date": "2024-03-01",
+              "width_mm": 0.7
+            },
+            {
+              "date": "2024-03-07",
+              "width_mm": 0.8
+            },
+            {
+              "date": "2024-03-15",
+              "width_mm": 1
+            },
+            {
+              "date": "2024-03-22",
+              "width_mm": 1.3
+            },
+            {
+              "date": "2024-03-29",
+              "width_mm": 1.5
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "label": "다산정보관 WP 9",
+          "location": {
+            "latitude": 36.145104,
+            "longitude": 128.393629,
+            "altitude": 113
+          },
+          "measurements": [
+            {
+              "date": "2024-03-01",
+              "width_mm": 0.4
+            },
+            {
+              "date": "2024-03-07",
+              "width_mm": 0.5
+            },
+            {
+              "date": "2024-03-15",
+              "width_mm": 0.7
+            },
+            {
+              "date": "2024-03-22",
+              "width_mm": 0.9
+            },
+            {
+              "date": "2024-03-29",
+              "width_mm": 1.1
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "label": "다산정보관 WP 10",
+          "location": {
+            "latitude": 36.145114,
+            "longitude": 128.393639,
+            "altitude": 113.3
+          },
+          "measurements": [
+            {
+              "date": "2024-03-01",
+              "width_mm": 0.6
+            },
+            {
+              "date": "2024-03-07",
+              "width_mm": 0.7
+            },
+            {
+              "date": "2024-03-15",
+              "width_mm": 0.9
+            },
+            {
+              "date": "2024-03-22",
+              "width_mm": 1.2
+            },
+            {
+              "date": "2024-03-29",
+              "width_mm": 1.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "담헌실험관",
+      "location": {
+        "latitude": 36.144512,
+        "longitude": 128.393891
+      },
+      "measurements": [
+        {
+          "id": 1,
+          "label": "담헌실험관 WP 1",
+          "location": {
+            "latitude": 36.144522,
+            "longitude": 128.393901,
+            "altitude": 109.5
+          },
+          "measurements": [
+            {
+              "date": "2024-03-01",
+              "width_mm": 0.2
+            },
+            {
+              "date": "2024-03-07",
+              "width_mm": 0.2
+            },
+            {
+              "date": "2024-03-15",
+              "width_mm": 0.3
+            },
+            {
+              "date": "2024-03-22",
+              "width_mm": 0.3
+            },
+            {
+              "date": "2024-03-29",
+              "width_mm": 0.4
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "label": "담헌실험관 WP 2",
+          "location": {
+            "latitude": 36.144532,
+            "longitude": 128.393911,
+            "altitude": 109.8
+          },
+          "measurements": [
+            {
+              "date": "2024-03-01",
+              "width_mm": 0.4
+            },
+            {
+              "date": "2024-03-07",
+              "width_mm": 0.5
+            },
+            {
+              "date": "2024-03-15",
+              "width_mm": 0.7
+            },
+            {
+              "date": "2024-03-22",
+              "width_mm": 0.9
+            },
+            {
+              "date": "2024-03-29",
+              "width_mm": 1.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1549212044",
+      "name": "한국과학기술회관",
+      "address": "서울 강남구 역삼동 635-2",
+      "location": {
+        "latitude": 37.50072289861569,
+        "longitude": 127.03074823320446
+      },
+      "measurements": [
+        {
+          "id": 1,
+          "label": "한국과학기술회관 WP 1",
+          "location": {
+            "latitude": 37.50082289861569,
+            "longitude": 127.03084823320447,
+            "altitude": 95.5
+          },
+          "measurements": [
+            {
+              "date": "2024-03-01",
+              "width_mm": 0.4
+            },
+            {
+              "date": "2024-03-07",
+              "width_mm": 0.5
+            },
+            {
+              "date": "2024-03-15",
+              "width_mm": 0.7
+            },
+            {
+              "date": "2024-03-22",
+              "width_mm": 0.9
+            },
+            {
+              "date": "2024-03-29",
+              "width_mm": 1.1
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "label": "한국과학기술회관 WP 2",
+          "location": {
+            "latitude": 37.50092289861569,
+            "longitude": 127.03094823320446,
+            "altitude": 95.8
+          },
+          "measurements": [
+            {
+              "date": "2024-03-01",
+              "width_mm": 0.6
+            },
+            {
+              "date": "2024-03-07",
+              "width_mm": 0.7
+            },
+            {
+              "date": "2024-03-15",
+              "width_mm": 0.9
+            },
+            {
+              "date": "2024-03-22",
+              "width_mm": 1.2
+            },
+            {
+              "date": "2024-03-29",
+              "width_mm": 1.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8627430",
+      "name": "한국기술교육대학교 제2캠퍼스",
+      "address": "충남 천안시 서북구 부대동 415-1",
+      "location": {
+        "latitude": 36.8419321957832,
+        "longitude": 127.14343754744
+      },
+      "measurements": []
+    },
+    {
+      "id": "17566704",
+      "name": "한국기술교육대학교 공학1관",
+      "address": "충남 천안시 동남구 병천면 가전리 307",
+      "location": {
+        "latitude": 36.7654758605508,
+        "longitude": 127.28039387785
+      },
+      "measurements": []
+    },
+    {
+      "id": "17556127",
+      "name": "한국기술교육대학교 공학2관",
+      "address": "충남 천안시 동남구 병천면 가전리 307",
+      "location": {
+        "latitude": 36.7667518118178,
+        "longitude": 127.281930727727
+      },
+      "measurements": []
+    },
+    {
+      "id": "8627430",
+      "name": "한국기술교육대학교 제2캠퍼스",
+      "address": "충남 천안시 서북구 부대동 415-1",
+      "location": {
+        "latitude": 36.8419321957832,
+        "longitude": 127.14343754744
+      },
+      "measurements": []
+    },
+    {
+      "id": "11218034",
+      "name": "한국기술교육대학교 제1캠퍼스",
+      "address": "충남 천안시 동남구 병천면 가전리 307",
+      "location": {
+        "latitude": 36.76458140716308,
+        "longitude": 127.28252982310103
+      },
+      "measurements": []
+    },
+    {
+      "id": "10007934",
+      "name": "한국기술교육대학교 보건실",
+      "address": "충남 천안시 동남구 병천면 가전리 307",
+      "location": {
+        "latitude": 36.7630084217962,
+        "longitude": 127.281236078438
+      },
+      "measurements": []
+    },
+    {
+      "id": "494733730",
+      "name": "한기대오락실",
+      "address": "충남 천안시 동남구 병천면 가전리 307",
+      "location": {
+        "latitude": 36.76302283180945,
+        "longitude": 127.28238074874994
+      },
+      "measurements": []
+    },
+    {
+      "name": "신전떡볶이 한기대점",
+      "address": "충남 천안시 동남구 병천면 가전리 190-53",
+      "measurements": [],
+      "id": "1744021399164",
+      "location": {
+        "longitude": 127.283401394396,
+        "latitude": 36.7682910259592
+      }
+    },
+    {
+      "name": "티바두마리치킨 한기대점",
+      "address": "충남 천안시 동남구 병천면 가전리 157-8",
+      "measurements": [],
+      "id": "1744021407569",
+      "location": {
+        "longitude": 127.285118169581,
+        "latitude": 36.7636804254509
+      }
+    },
+    {
+      "name": "한기대후문코인노래연습장",
+      "address": "충남 천안시 동남구 병천면 가전리 158-8",
+      "measurements": [],
+      "id": "1744034346091",
+      "location": {
+        "longitude": 127.284836941324,
+        "latitude": 36.7642560104436
+      }
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.cardHeader {
+  margin-bottom: 1.5rem;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.cardContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0 -1.5rem;
+  padding: 0 1.5rem;
+}
+
+.tableHeader {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0.5rem 0;
+  color: #999999;
+  font-family: Pretendard;
+  font-size: 0.703125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.01758rem;
+  margin-bottom: 0.5rem;
+}
+
+.tableBody {
+  flex: 1;
+  overflow-y: auto;
+  margin: 0 -1.5rem;
+  padding: 0 1.5rem;
+}
+
+.tableBody::-webkit-scrollbar {
+  width: 4px;
+}
+
+.tableBody::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tableBody::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.tableBody::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.tableRow {
+  display: flex;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 0.703125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.02344rem;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.buildingColumn {
+  flex: 2;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+  color: #000000;
+}
+
+.crackCountColumn {
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
+  color: #000000;
+}
+
+.changeColumn {
+  flex: 1;
+  text-align: right;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #000000;
+}
+
+.triangleUp {
+  margin-right: 5px;
+  color: #e74c3c;
+}
+
+.triangleDown {
+  margin-right: 5px;
+  color: #2ecc71;
+}
+
+.up {
+  color: #e74c3c;
+}
+
+.down {
+  color: #2ecc71;
+}
+
+.same {
+  color: #000000;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: #777;
+}
+
+.noData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: #777;
+}

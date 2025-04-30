@@ -1,0 +1,152 @@
+/* pages/index.module.css */
+.container {
+  width: 100%; /* 전체 너비 */
+  height: 100vh;
+  background: #f1f1f5;
+  display: flex;
+  overflow: auto;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* 사이드바를 제외한 나머지 공간 */
+  height: 100%;
+}
+
+.main {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  padding-bottom: 60px; /* 헤더 높이만큼 하단 패딩 추가 */
+}
+
+.dashboardGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  margin-right: 3.14rem;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* row1, row2는 더 이상 사용하지 않음 */
+
+.gridItem {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sidebar {
+  width: auto;
+  height: 100%;
+  border: 1px solid #000;
+  background: #131739;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+.footerText {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.disclaimerText {
+  position: absolute;
+  bottom: 8px;
+  right: 20px;
+  max-width: 100%; /* 최대 너비 증가 */
+  text-align: center;
+  color: #7e41ff;
+  font-family: Pretendard;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* 우측 정렬 */
+  gap: 8px;
+}
+
+.warningIcon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+/* 모바일 반응형 스타일 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .dashboardGrid {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    grid-template-rows: auto;
+    position: relative;
+    bottom: auto;
+    padding-top: 10px;
+  }
+
+  .gridItem {
+    min-height: 200px;
+  }
+
+  .disclaimerText {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin: 10px auto;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* 작은 모바일 화면 */
+@media (max-width: 480px) {
+  .gridItem {
+    min-height: 180px;
+  }
+
+  .main {
+    padding-bottom: 80px;
+  }
+
+  .dashboardGrid {
+    gap: 10px;
+    margin: 0 10px;
+  }
+}
