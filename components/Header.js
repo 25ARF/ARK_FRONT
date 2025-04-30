@@ -1,4 +1,6 @@
 import styles from "./Header.module.css";
+import { BuildingDropdown } from "./BuildingDropdown";
+import { useState } from "react";
 
 /**
  * Header 컴포넌트
@@ -15,6 +17,12 @@ export default function Header({
   onToggleSidebar,
   isMobileView,
 }) {
+  const [selectedBuilding, setSelectedBuilding] = useState("다산정보관");
+
+  const handleBuildingChange = (building) => {
+    setSelectedBuilding(building);
+  };
+
   return (
     <div className={styles.headerContainer}>
       <header className={styles.header}>
@@ -42,8 +50,12 @@ export default function Header({
           </button>
         )}
 
-        {/* 페이지 제목 */}
-        <div className={styles.headerText}>Dashboard</div>
+        <div className={styles.headerContent}>
+          <BuildingDropdown
+            selectedBuilding={selectedBuilding}
+            onBuildingChange={handleBuildingChange}
+          />
+        </div>
       </header>
     </div>
   );
