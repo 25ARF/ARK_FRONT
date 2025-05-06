@@ -23,6 +23,7 @@
   /* display: flex; */
   /* align-items: center; */
   /* justify-content: center; */
+  position: relative; /* 팝업 위치 기준점 */
 }
 
 /* 사이드바 토글 버튼 스타일 */
@@ -47,6 +48,108 @@
   justify-content: center;
 }
 
+/* 정보 버튼 스타일 */
+.infoButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.infoButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 팝업 오버레이 */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* 팝업 컨테이너 */
+.popup {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: popupFadeIn 0.3s ease;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 팝업 헤더 */
+.popupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.popupHeader h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+/* 닫기 버튼 */
+.closeButton {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.closeButton:hover {
+  background: #f5f5f5;
+}
+
+/* 팝업 내용 */
+.popupContent {
+  padding: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+  color: #333;
+}
+
+.popupContent p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
 /* 모바일 화면 스타일 */
 @media (max-width: 768px) {
   .headerContainer {
@@ -60,5 +163,9 @@
 
   .header {
     padding: 0 0.5rem;
+  }
+
+  .popup {
+    width: 95%;
   }
 }

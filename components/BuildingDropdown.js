@@ -6,34 +6,63 @@ import styles from "./BuildingDropdown.module.css";
 import axios from "../lib/axios";
 import { useBuilding } from "../contexts/BuildingContext";
 
-const BuildingDropdown = ({ selectedBuilding, onBuildingChange }) => {
+export function BuildingDropdown({
+  selectedBuilding: externalSelectedBuilding,
+  onBuildingChange,
+}) {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
   const [buildings, setBuildings] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const dropdownRef = useRef(null);
-  const { setSelectedBuilding } = useBuilding();
+  const {
+    selectedBuilding: contextBuilding,
+    setSelectedBuilding: setContextBuilding,
+  } = useBuilding();
+  const [localSelectedBuilding, setLocalSelectedBuilding] = useState(
+    externalSelectedBuilding
+  );
 
+  // 컴포넌트 마운트 시 건물 목록 가져오기
   useEffect(() => {
     fetchBuildings();
   }, []);
 
+  // API에서 건물 목록 가져오기
   const fetchBuildings = async () => {
     try {
+      setLoading(true);
       const response = await axios.get("/buildings");
-      setBuildings(response.data);
+      const buildingList = response.data;
 
-      // 첫 번째 건물을 기본값으로 설정
-      if (response.data.length > 0) {
-        const firstBuilding = response.data[0];
-        setSelectedBuilding(firstBuilding);
-        onBuildingChange(firstBuilding);
+      if (buildingList && buildingList.length > 0) {
+        setBuildings(buildingList);
+
+        // 처음 로드 시 기본 선택 건물 설정
+        if (!localSelectedBuilding && buildingList.length > 0) {
+          const defaultBuilding = buildingList[0];
+          setLocalSelectedBuilding(defaultBuilding.name);
+          onBuildingChange(defaultBuilding.name);
+          setContextBuilding(defaultBuilding);
+
+          // 첫 로드 시 기본 선택 건물로 맵 이동
+          moveMapToBuilding(defaultBuilding);
+        }
       }
     } catch (error) {
-      console.error("건물 데이터 로딩 실패:", error);
-      setError("건물 목록을 불러오는데 실패했습니다.");
+      console.error("건물 목록 가져오기 실패:", error);
     } finally {
       setLoading(false);
+    }
+  };
+
+  // 선택한 건물로 맵 이동 함수
+  const moveMapToBuilding = (building) => {
+    if (building && building.location) {
+      // buildingSelect 이벤트 발생
+      const event = new CustomEvent("buildingSelect", {
+        detail: building,
+      });
+      window.dispatchEvent(event);
     }
   };
 
@@ -42,8 +71,17 @@ const BuildingDropdown = ({ selectedBuilding, onBuildingChange }) => {
   };
 
   const selectBuilding = (building) => {
-    setSelectedBuilding(building);
-    onBuildingChange(building);
+    setLocalSelectedBuilding(building.name);
+
+    // 부모 컴포넌트에 변경 알림
+    onBuildingChange(building.name);
+
+    // BuildingContext에 선택된 건물 정보 저장
+    setContextBuilding(building);
+
+    // 선택한 건물로 맵 이동
+    moveMapToBuilding(building);
+
     setIsOpen(false);
   };
 
@@ -61,14 +99,6 @@ const BuildingDropdown = ({ selectedBuilding, onBuildingChange }) => {
     };
   }, []);
 
-  if (loading) {
-    return <div className={styles.container}>로딩 중...</div>;
-  }
-
-  if (error) {
-    return <div className={styles.container}>{error}</div>;
-  }
-
   return (
     <div className={styles.container} ref={dropdownRef}>
       <button
@@ -76,24 +106,25 @@ const BuildingDropdown = ({ selectedBuilding, onBuildingChange }) => {
         onClick={toggleDropdown}
         aria-expanded={isOpen}
         aria-haspopup="listbox"
+        disabled={loading}
       >
-        <span>{selectedBuilding?.name || "건물 선택"}</span>
+        <span>{loading ? "로딩 중..." : localSelectedBuilding}</span>
         <ChevronDown
           className={`${styles.icon} ${isOpen ? styles.iconRotated : ""}`}
         />
       </button>
 
-      {isOpen && (
+      {isOpen && !loading && (
         <div className={styles.dropdownMenu} role="listbox">
           {buildings.map((building) => (
             <div
               key={building.id}
               className={`${styles.dropdownItem} ${
-                selectedBuilding?.id === building.id ? styles.selected : ""
+                localSelectedBuilding === building.name ? styles.selected : ""
               }`}
               onClick={() => selectBuilding(building)}
               role="option"
-              aria-selected={selectedBuilding?.id === building.id}
+              aria-selected={localSelectedBuilding === building.name}
             >
               {building.name}
             </div>
@@ -102,6 +133,4 @@ const BuildingDropdown = ({ selectedBuilding, onBuildingChange }) => {
       )}
     </div>
   );
-};
-
-export default BuildingDropdown;
+}

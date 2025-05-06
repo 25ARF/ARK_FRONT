@@ -1,0 +1,70 @@
+/* components/RightSidebar.module.css */
+.rightSidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* 초기에는 화면 오른쪽에 숨김 */
+  width: 300px;
+  height: 100vh;
+  background: #0b0d21;
+  color: #fff;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 100; /* 다른 요소 위에 표시 */
+}
+
+.rightSidebar.open {
+  right: 0; /* 열리면 오른쪽에서 나타남 */
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* left 대신 right 사용 */
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.profile {
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 40px; /* Close button 위한 공간 확보 */
+}
+
+.profileIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #555;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin: 0 auto 10px;
+}
+
+.settings h3 {
+  margin-top: 20px;
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+}
+
+.settings ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.settings li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.settings li:hover {
+  background-color: #444;
+}
