@@ -23,7 +23,7 @@ const AddressSearchInput = ({
         type="text"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-        placeholder="예) 다산정보관"
+        placeholder="충절로 1600"
         className={styles.searchInput}
         onKeyPress={(e) => e.key === "Enter" && onSearch()} // Enter 키 누르면 검색 실행
       />
