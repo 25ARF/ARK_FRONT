@@ -6,14 +6,21 @@
   justify-content: space-between; /* 추가: 요소들을 양쪽 끝으로 배치 */
   height: 100%; /* 부모 높이 채우기 */
   align-items: center; /* 추가: 세로 중앙 정렬 */
+  padding: 0 1rem; /* 추가: 좌우 패딩 */
 }
 
-.headerContent {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.headerText {
+  color: #a5a6b9;
+  font-family: Pretendard;
+  font-size: 1.31rem; /* 1.75rem * 0.75 */
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.033rem; /* -0.04375rem * 0.75 */
+  margin-top: 1.04rem; /* 1.38rem * 0.75 */
 }
 
+/* 추가할 스타일 */
 .headerContainer {
   height: 3.7rem; /* 4.9375rem * 0.75 */
   width: 100%;
