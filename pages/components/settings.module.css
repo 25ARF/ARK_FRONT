@@ -1,0 +1,25 @@
+/* pages/settings.module.css */
+.container {
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 20px;
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section li {
+  padding: 8px 0;
+}

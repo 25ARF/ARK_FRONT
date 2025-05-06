@@ -1,0 +1,298 @@
+/* 건물 목록 카드 전체 컨테이너 */
+.card {
+  background: white;
+  border-radius: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+  margin-bottom: 12px;
+  padding: 16px 0;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.resultsHeader {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  background-color: #f9f9f9;
+  margin-bottom: 0;
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  height: 180px;
+  margin-top: 0;
+}
+
+.list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+}
+
+.list::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.buildingItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-bottom: 1px solid #f5f5f5;
+  border-radius: 0;
+  transition: background-color 0.2s;
+}
+
+.buildingItem:last-child {
+  border-bottom: none;
+}
+
+.buildingItem:hover {
+  background-color: #f8f8f8;
+}
+
+.buildingItem.selected {
+  background-color: #f0f0f0;
+}
+
+.buildingInfo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.itemNumber {
+  margin-right: 8px;
+  font-size: 0.9rem;
+  color: #666;
+  min-width: 20px;
+}
+
+.buildingName {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.coordinates {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.iconBtn img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  display: block;
+}
+
+.emptyMessage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 14px;
+  padding: 16px;
+}
+
+.loading {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 14px;
+  padding: 16px;
+}
+
+.error {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff4444;
+  background-color: #fff5f5;
+  border-radius: 0;
+  font-size: 14px;
+  padding: 16px;
+}
+
+/* 건물 목록 헤더 (번호, 건물명) 스타일 */
+.listHeader {
+  display: flex;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #f5f5fa;
+  border-radius: 0.75rem;
+  color: #999;
+  font-size: 0.875rem;
+}
+
+/* 목록 헤더 - '번호' 컬럼 스타일 */
+.columnNumber {
+  width: 4rem;
+}
+
+/* 목록 헤더 - '건물명' 컬럼 스타일 */
+.columnName {
+  flex: 1;
+}
+
+.buildingList::-webkit-scrollbar {
+  width: 4px;
+}
+
+.buildingList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.buildingList::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0.2px;
+}
+
+.buildingList::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.searchContainer {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.searchInput::placeholder {
+  color: #999;
+}
+
+/* 모달 오버레이 */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* 모달 컨텐츠 */
+.modalContent {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  width: 90%;
+  max-width: 320px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modalContent h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.modalContent p {
+  margin-bottom: 24px;
+  color: #555;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.modalButton {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.confirmButton {
+  background-color: #ff4444;
+  color: white;
+}
+
+.confirmButton:hover {
+  background-color: #ff2222;
+}
+
+.cancelButton {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.cancelButton:hover {
+  background-color: #e5e5e5;
+}

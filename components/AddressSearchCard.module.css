@@ -1,0 +1,161 @@
+/* 주소 검색 카드 전체 컨테이너 */
+.card {
+  background: white; /* 흰색 배경 */
+  border-radius: 8px; /* 모서리 둥글게 */
+  padding: 20px; /* 내부 여백 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  width: 300px; /* 카드 너비 */
+  max-height: 80vh; /* 최대 높이 (뷰포트 높이의 80%) */
+  overflow-y: auto; /* 내용 많을 시 세로 스크롤 자동 생성 */
+}
+
+/* (JS 코드 상 미사용) 헤더 영역 스타일 */
+.header {
+  padding: 16px;
+  border-bottom: 1px solid #eee; /* 아래쪽 테두리 */
+}
+
+/* (JS 코드 상 미사용) 헤더 제목(h2) 스타일 */
+.header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* (JS 코드 상 미사용) 내용 영역 스타일 */
+.content {
+  padding: 16px;
+}
+
+/* 검색 입력창 + 버튼 컨테이너 */
+.searchContainer {
+  display: flex; /* 가로 배치 */
+  gap: 10px; /* 요소 사이 간격 */
+  margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+/* 검색 입력창 스타일 */
+.searchInput {
+  flex: 1; /* 남는 공간 모두 차지 */
+  padding: 8px 12px;
+  border: 1px solid #ddd; /* 회색 테두리 */
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* 검색 버튼 스타일 */
+.searchButton {
+  padding: 8px 16px;
+  background-color: #007bff; /* 파란색 배경 */
+  color: white; /* 흰색 텍스트 */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* 검색 버튼 마우스 호버 효과 */
+.searchButton:hover {
+  background-color: #0056b3; /* 약간 더 진한 파란색 */
+}
+
+/* 로딩 중 메시지 스타일 */
+.loading {
+  text-align: center; /* 텍스트 중앙 정렬 */
+  padding: 20px;
+  color: #666; /* 회색 텍스트 */
+}
+
+/* 에러 메시지 스타일 */
+.error {
+  color: #dc3545; /* 빨간색 텍스트 */
+  padding: 10px;
+  background-color: #f8d7da; /* 연한 빨간색 배경 */
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* 검색 결과 또는 저장된 위치 목록 컨테이너 */
+.searchResults,
+.savedLocations {
+  /* .savedLocations는 JS 코드 상 미사용 */
+  margin-top: 20px;
+}
+
+/* 검색 결과 또는 저장된 위치 제목(h3) 스타일 */
+.searchResults h3,
+.savedLocations h3 {
+  /* .savedLocations는 JS 코드 상 미사용 */
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 16px;
+}
+
+/* 검색 결과 또는 저장된 위치 항목 기본 스타일 */
+.resultItem,
+.savedItem {
+  /* .savedItem은 JS 코드 상 미사용 */
+  padding: 10px;
+  border: 1px solid #eee; /* 연한 회색 테두리 */
+  border-radius: 4px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s; /* 배경색 변경 부드럽게 */
+}
+
+/* 검색 결과 항목 마우스 호버 효과 */
+.resultItem:hover {
+  background-color: #f8f9fa; /* 연한 회색 배경 */
+}
+
+/* (JS 코드 상 미사용) 저장된 위치 항목 스타일 (내부 요소 정렬) */
+.savedItem {
+  display: flex;
+  justify-content: space-between; /* 양쪽 끝 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+/* (JS 코드 상 미사용) 저장된 위치의 장소 정보 영역 */
+.placeInfo {
+  flex: 1; /* 남는 공간 차지 */
+}
+
+/* 장소 이름 스타일 */
+.placeName {
+  font-weight: 500; /* 약간 굵게 */
+  margin-bottom: 4px;
+}
+
+/* 주소 텍스트 스타일 */
+.address {
+  font-size: 12px; /* 작은 글씨 */
+  color: #666; /* 회색 텍스트 */
+}
+
+/* (JS 코드 상 미사용) 삭제 버튼 스타일 */
+.removeButton {
+  padding: 4px 8px;
+  background-color: #dc3545; /* 빨간색 배경 */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 10px; /* 왼쪽 여백 */
+}
+
+/* (JS 코드 상 미사용) 삭제 버튼 호버 효과 */
+.removeButton:hover {
+  background-color: #c82333; /* 더 진한 빨간색 */
+}
+
+/* 검색 결과 없음 메시지 스타일 */
+.noResults {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  background-color: #f8f9fa; /* 연한 회색 배경 */
+  border-radius: 4px;
+  margin-top: 10px;
+  border: 1px dashed #dee2e6; /* 점선 테두리 */
+}
